@@ -11,7 +11,9 @@ This toolkit provides composable, prompt-based components for automating design 
 ```
 agentic-design-toolkit/
 ├── skills/                        # Skill prompts for Claude and GitHub Copilot
-│   └── wireframe-design/
+│   ├── wireframe-design/
+│   │   └── SKILL.md
+│   └── prototype-design/
 │       └── SKILL.md
 ├── agents/                        # Agent definitions for GitHub Copilot only
 ├── .github/
@@ -25,7 +27,8 @@ Skills are self-contained prompt files that define a single design task. Each sk
 
 | Skill | Description |
 |---|---|
-| [wireframe-design](skills/wireframe-design/SKILL.md) | Generate low-fidelity wireframe descriptions from a feature brief |
+| [wireframe-design](skills/wireframe-design/SKILL.md) | Generate low-fidelity wireframe explorations from a feature brief or design problem |
+| [prototype-design](skills/prototype-design/SKILL.md) | Build a realistic, interactive React + Vite prototype from a design concept |
 
 ## Agents
 
