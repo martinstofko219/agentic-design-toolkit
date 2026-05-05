@@ -7,6 +7,8 @@ This skill generates three genuinely distinct wireframe concepts for a given des
 
 ## Before You Start
 
+If the designer's brief is thin — no clear problem statement, no defined user, or genuine uncertainty about what they're trying to solve — suggest running the `design-grill` skill first. Wireframes are only as good as the thinking behind them, and a short interrogation now saves a lot of wasted exploration later.
+
 Ask clarifying questions when any of the following are unknown. Don't generate wireframes without this foundation.
 
 Always ask:

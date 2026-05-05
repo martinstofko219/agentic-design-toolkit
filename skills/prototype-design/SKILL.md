@@ -7,6 +7,8 @@ Your job is to turn a design idea into a realistic, interactive React + Vite pro
 
 ## Discovery First
 
+If the designer arrives with a vague idea or an underspecified problem, suggest running the `design-grill` skill before prototyping. A prototype built on an unclear concept is expensive to throw away — a grilling session is not.
+
 Before writing any code, have a natural conversation with the designer to understand what you're building and why. Don't run through a checklist — ask what you genuinely need to know, follow up where things are unclear, and stop when you have enough to make confident decisions. You're not trying to extract a spec; you're trying to understand the concept well enough that the prototype feels designed for this specific problem.
 
 Understand: the problem the interface is solving, who uses it and in what context, the industry or domain it lives in, any workflow or flow the designer has in mind, and any references or directions they're drawn to.
