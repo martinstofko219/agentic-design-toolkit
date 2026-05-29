@@ -44,7 +44,7 @@ Copy `design-system.config.template.md` to the root of your design-system repo a
 
 For each component or foundation, three things land in the right place for its type:
 
-- A **docs MDX page** following a consistent spine — Overview, Usage, Variants, Behavior, Content, Placement, Do's and Don'ts, Accessibility, Related — including only the sections that apply to the component's archetype.
+- A **docs MDX page** following a consistent spine — Overview, Usage, Variants, Behavior, Content, Placement, Accessibility, Related — including only the sections that apply to the component's archetype. Do/don't guidance isn't a separate section; it's woven into whichever section discusses the relevant use case, with paired right/wrong examples shown inline.
 - An **Angular stories file** (CSF3, Storybook 8) implementing every example the page embeds via `<Canvas of={...}>`.
 - An **example plan** — a short markdown file mapping each story to the docs section that uses it, as a spec and a maintenance checklist.
 
@@ -56,7 +56,7 @@ For **custom components only**, when you supply source material — existing cod
 
 ## Good to know
 
-The spine is fixed but the sections flex to the component — a static display element won't carry a content-truncation section, an interactive control will have a fuller behavior section. Consistency comes from the order and the always-present sections (Overview, Usage, Do's and Don'ts, Accessibility), not from forcing every page to look identical.
+The spine is fixed but the sections flex to the component — a static display element won't carry a content-truncation section, an interactive control will have a fuller behavior section. Consistency comes from the order and the always-present sections (Overview, Usage, Accessibility), not from forcing every page to look identical.
 
 Examples are always real stories, never screenshots, so the docs stay in sync with the components as they change.
 

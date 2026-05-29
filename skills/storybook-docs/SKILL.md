@@ -21,7 +21,9 @@ This is what makes the skill portable. The documentation spine never changes; on
 
 ## The documentation spine
 
-Every component docs page uses the same top-level skeleton so the library reads consistently. Within that skeleton, include only the sections that are meaningful for the component's archetype — a static display component doesn't need a content-truncation section; a non-interactive one needs less behavior coverage. Decide the archetype first (an input, an action, a navigation element, a selection control, a container or surface, a feedback element, or a data-display element), then let it tell you which conditional sections earn their place. Always include Overview, Usage, Do's and Don'ts, and Accessibility. The rest are included when relevant.
+Every component docs page uses the same top-level skeleton so the library reads consistently. Within that skeleton, include only the sections that are meaningful for the component's archetype — a static display component doesn't need a content-truncation section; a non-interactive one needs less behavior coverage. Decide the archetype first (an input, an action, a navigation element, a selection control, a container or surface, a feedback element, or a data-display element), then let it tell you which conditional sections earn their place. Always include Overview, Usage, and Accessibility. The rest are included when relevant.
+
+There is no standalone do's-and-don'ts section. Instead, weave do/don't guidance into the sections where the relevant use case is already being discussed — a recommendation about which variant to reach for belongs in Usage or Variants, a recommendation about handling overflow belongs in Behavior, a recommendation about pairing belongs in Placement. Where a point is best made by contrast, embed a paired right/wrong example (two stories shown together) inline in that section, close to the guidance it illustrates. Make the examples specific; favor showing the contrast over merely asserting the rule.
 
 **Overview** — what the component is and the role it plays in the system, in a sentence or two. Frame it in the base system's terms.
 
@@ -35,8 +37,6 @@ Every component docs page uses the same top-level skeleton so the library reads 
 
 **Placement and layout** *(when placement is a real decision)* — where the component belongs on a page, density, what it pairs well with, and what to avoid putting next to it.
 
-**Do's and Don'ts** — a handful of paired recommendations, each with a live example of the right and wrong approach. This is often the most-used section; make the examples specific.
-
 **Accessibility** — keyboard interaction and focus order, screen-reader expectations and roles/labels, color and contrast considerations, and target size. Hold it to the standard named in the config. Be concrete about this component, not generic.
 
 **Related components** — links to neighbors a reader might actually need.
@@ -45,7 +45,7 @@ Foundations use a parallel skeleton adapted to the topic: the principles behind 
 
 ## Stories and embedding
 
-Examples in the docs must be real, rendered Storybook stories — not screenshots or code blocks. Author them as Angular CSF stories (Component Story Format 3) for Storybook 8: a typed `Meta` default export naming the component, with a named export for each example you document. Use `args` for simple prop-driven variations and a `render` function with a `template` (plus `moduleMetadata` for any required imports) when an example needs composition or surrounding markup. Name stories after what they demonstrate — the variants, the states, and the right/wrong pairs from Do's and Don'ts — so the docs read clearly and every documented example maps to a story.
+Examples in the docs must be real, rendered Storybook stories — not screenshots or code blocks. Author them as Angular CSF stories (Component Story Format 3) for Storybook 8: a typed `Meta` default export naming the component, with a named export for each example you document. Use `args` for simple prop-driven variations and a `render` function with a `template` (plus `moduleMetadata` for any required imports) when an example needs composition or surrounding markup. Name stories after what they demonstrate — the variants, the states, and the do/don't comparisons that illustrate the guidance — so the docs read clearly and every documented example maps to a story.
 
 Attach the docs page to those stories with MDX Docs blocks. Import the stories module and the blocks you need, place `<Meta of={...} />` at the top to bind the page, and embed each example with `<Canvas of={Stories.ExampleName} />` in the section that discusses it. The rule to hold: every `<Canvas>` in the MDX must resolve to a story that actually exists in the stories file. Don't reference examples you haven't scaffolded.
 
