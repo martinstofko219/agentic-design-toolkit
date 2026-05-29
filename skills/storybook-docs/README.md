@@ -20,6 +20,7 @@ Reach for it when something in the system needs a docs page. Good triggers inclu
 - "Write the MDX docs for the empty-state component"
 - "Document our color / typography / spacing foundations"
 - "We have Zeroheight markdown for the dialog — turn it into Storybook docs"
+- "Write the API docs and coding guidelines for this custom component" (provide the source material)
 
 You can point it at exported reference markdown to reuse existing content, or have it write from scratch.
 
@@ -48,6 +49,8 @@ For each component or foundation, three things land in the right place for its t
 - An **example plan** — a short markdown file mapping each story to the docs section that uses it, as a spec and a maintenance checklist.
 
 Custom components get all three in a `stories/` subfolder inside the component's folder. Base/Material components and foundations go in the shared stories folder named in the config.
+
+For **custom components only**, when you supply source material — existing coding guidelines, integration notes, or the component's TypeScript — the skill also produces a **separate developer docs page**: import/registration, an API reference (inputs/outputs generated from the component's Angular metadata via Storybook's `ArgTypes`, enriched with your provided context, with any mismatches surfaced), coding guidelines and patterns, and runnable code examples bound to the same stories. Material/base components rely on the upstream library's API docs and don't get this page.
 
 ---
 
