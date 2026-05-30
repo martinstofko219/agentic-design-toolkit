@@ -5,7 +5,7 @@
 
 baseSystem: material3        # material3 | custom | <name of another system>
 framework: angular
-storybookVersion: 8
+storybookVersion: 10        # the skill keys version-specific details (e.g. docs-blocks import path) off this
 accessibility: WCAG 2.1 AA
 
 paths:

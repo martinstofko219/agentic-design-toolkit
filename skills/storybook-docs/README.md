@@ -45,7 +45,7 @@ Copy `design-system.config.template.md` to the root of your design-system repo a
 For each component or foundation, three things land in the right place for its type:
 
 - A **docs MDX page** following a consistent spine — Overview, Usage, Variants, Behavior, Content, Placement, Accessibility, Related — including only the sections that apply to the component's archetype. Do/don't guidance isn't a separate section; it's woven into whichever section discusses the relevant use case, with paired right/wrong examples shown inline.
-- An **Angular stories file** (CSF3, Storybook 8) implementing every example the page embeds via `<Canvas of={...}>`.
+- An **Angular stories file** (CSF3) implementing every example the page embeds via `<Canvas of={...}>`. CSF3 is stable across modern Storybook; the skill reads the Storybook version from the config only to pick version-specific details like the docs-blocks import path.
 - An **example plan** — a short markdown file mapping each story to the docs section that uses it, as a spec and a maintenance checklist.
 
 Custom components get all three in a `stories/` subfolder inside the component's folder. Base/Material components and foundations go in the shared stories folder named in the config.
