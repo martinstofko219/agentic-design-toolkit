@@ -10,7 +10,7 @@ This toolkit provides reusable, composable components for automating design-rela
 - `agents/` — Agent definitions for GitHub Copilot only. Each agent lives in its own folder with a `README.md` describing its purpose, inputs, and behavior. If a Claude equivalent is ever needed, it will live in a separate top-level folder (e.g. `plugins/`).
 
 ## Conventions
-- Each skill lives in its own folder under `skills/` with a `SKILL.md` as the entry point
+- Each skill lives in its own folder under `skills/` with a `SKILL.md` as the entry point and a `README.md` describing its purpose, trigger conditions, and expected output
 - Each agent lives in its own folder under `agents/` with a `README.md` describing its purpose, trigger, and expected behavior
 - Skills should be self-contained: clear trigger conditions, a defined input/output contract, and step-by-step instructions
 - Write skills to be model-agnostic where possible; note Claude- or Copilot-specific behavior explicitly when it diverges
@@ -22,7 +22,7 @@ Tools in this repo target two AI platforms with different agent models:
 | Concept | GitHub Copilot | Claude |
 |---|---|---|
 | Invokable named agent | `@agent-name` in Copilot Chat (`agents/`) | Not in scope — use a separate `plugins/` folder if needed |
-| Reusable task prompt | `SKILL.md` in `.github/skills/` | `SKILL.md` in `skills/` |
+| Reusable task prompt | `SKILL.md` in `skills/` | `SKILL.md` in `skills/` |
 | Workspace instructions | `.github/copilot-instructions.md` | `CLAUDE.md` |
 
 ## Audience
