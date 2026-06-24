@@ -11,6 +11,8 @@ Design input may come from Figma frames (via the Figma MCP), React prototypes in
 
 One invocation typically produces a complete page or a coherent, self-contained section. Complex apps are built incrementally — section by section — across multiple invocations.
 
+**Session mode:** Once invoked, this skill stays active for the rest of the session. Apply these guidelines automatically to every subsequent build request without needing to be re-invoked. When the skill first loads, let the designer know it's active and will remain so until they say otherwise. To exit, the designer can say "stop spec-design" or "exit skill mode."
+
 ---
 
 ## Step 1: Verify Prerequisites
