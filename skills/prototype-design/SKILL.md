@@ -11,7 +11,7 @@ If the designer arrives with a vague idea or an underspecified problem, suggest 
 
 Before writing any code, have a natural conversation with the designer to understand what you're building and why. Don't run through a checklist — ask what you genuinely need to know, follow up where things are unclear, and stop when you have enough to make confident decisions. You're not trying to extract a spec; you're trying to understand the concept well enough that the prototype feels designed for this specific problem.
 
-Understand: the problem the interface is solving, who uses it and in what context, the industry or domain it lives in, any workflow or flow the designer has in mind, and any references or directions they're drawn to.
+Understand: the problem the interface is solving, who uses it and in what context, the industry or domain it lives in, any workflow or flow the designer has in mind, any references or directions they're drawn to, and whether there's existing research (interviews, usability findings, a synthesis doc) this prototype is meant to answer to.
 
 Once you have a clear picture, propose an aesthetic direction before building — but how you do this depends on what the designer brought you.
 
@@ -46,3 +46,7 @@ Structure it as a real multi-screen SPA with client-side routing or view state �
 ## What to Avoid
 
 Generic AI aesthetics: predictable layouts, the same overused fonts, purple color schemes and purple-on-white gradients that have become the default fingerprint of AI-generated UI. Placeholder content in any form. Building something that could be about anything — this prototype should be unmistakably about the specific concept the designer brought you.
+
+## After the Build
+
+If there's research this prototype was meant to respond to, the `prototype-audit` skill can check the finished result against it and produce a prioritized plan for anything that's still missing or off.

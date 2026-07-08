@@ -51,3 +51,4 @@ The lo-fi aesthetic is intentional — warm tones, hand-drawn-feeling borders, s
 
 - **`design-grill`** — run this first if the problem isn't clearly defined yet
 - **`prototype-design`** — once you've picked a direction, use this to build a high-fidelity interactive version
+- **`prototype-audit`** — if there's research findings to check against, this can audit a wireframe (built in realistic copy mode) the same way it audits a full prototype

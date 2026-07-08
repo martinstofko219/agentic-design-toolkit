@@ -23,7 +23,13 @@ agentic-design-toolkit/
 │   ├── storybook-docs/
 │   │   ├── SKILL.md
 │   │   └── README.md
-│   └── spec-design/
+│   ├── spec-design/
+│   │   ├── SKILL.md
+│   │   └── README.md
+│   ├── research-synthesis/
+│   │   ├── SKILL.md
+│   │   └── README.md
+│   └── prototype-audit/
 │       ├── SKILL.md
 │       └── README.md
 ├── agents/                        # Agent definitions for GitHub Copilot only
@@ -44,6 +50,8 @@ Skills are self-contained prompt files that define a single design task. Each sk
 | [design-grill](skills/design-grill/SKILL.md) | Stress-test a design idea through relentless one-at-a-time questioning before committing to a direction |
 | [storybook-docs](skills/storybook-docs/SKILL.md) | Turn a design-system component or foundation into Storybook MDX docs and Angular stories |
 | [spec-design](skills/spec-design/SKILL.md) | Build production-ready Angular UI pages and sections using the Nextech Design System |
+| [research-synthesis](skills/research-synthesis/SKILL.md) | Turn interview transcripts and research notes into a synthesis doc of themes, insights, and recommendations |
+| [prototype-audit](skills/prototype-audit/SKILL.md) | Check a prototype against a research synthesis and produce a prioritized implementation plan to close the gaps |
 
 ## Agents
 

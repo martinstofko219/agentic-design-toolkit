@@ -47,4 +47,4 @@ The skill will ask before assuming which files belong to the study if a transcri
 
 ## Related skills
 
-A companion skill for comparing a synthesis doc against prototypes to surface gaps and opportunities is a natural next addition to this toolkit — not yet built.
+- **`prototype-audit`** — takes this skill's output and checks it against a working prototype, producing a prioritized plan to close whatever gaps it finds

@@ -43,6 +43,8 @@ Gather and synthesize all available design references before writing any code.
 
 When multiple sources are available, treat them as complementary: Figma is authoritative on layout intent and visual hierarchy; the React prototype is authoritative on interaction flow and data structure; the Nextech MCP is authoritative on how to implement both.
 
+**Implementation plan from `prototype-audit`** — if the designer has a prioritized implementation plan produced by the `prototype-audit` skill, treat it as authoritative on what needs to change and why: it names specific gaps against research findings, in priority order. Build in that order unless the designer says otherwise, and use the plan's task descriptions alongside the design references above rather than re-deriving scope from scratch.
+
 ---
 
 ## Step 3: Discover Available Components and Patterns

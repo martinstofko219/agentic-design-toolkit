@@ -69,3 +69,4 @@ If a UI element has no Nextech equivalent, the skill will flag it and work with 
 - **`design-grill`** — run this first if the concept isn't clearly defined
 - **`prototype-design`** — use this when you need something interactive to explore or communicate the concept before speccing it out
 - **`wireframe-design`** — use this even earlier if you're still exploring structural directions
+- **`prototype-audit`** — if there's research findings to check the design against, run this first and hand the resulting plan in as another design input

@@ -69,7 +69,7 @@ Give a reader enough here to orient before they hit the themes below — who was
 |---|---|---|---|
 | [What the research showed] | [What could be done about it] | High/Med/Low | High/Med/Low |
 
-Write opportunities concretely enough that someone could point them at a specific flow or screen later — "make the checkout flow clearer" is more useful downstream than "improve usability." This doc is often the input to a later comparison against prototypes or designs, even though that comparison isn't this skill's job.
+Write opportunities concretely enough that someone could point them at a specific flow or screen later — "make the checkout flow clearer" is more useful downstream than "improve usability." This doc is often the input to a later comparison against prototypes or designs — see the `prototype-audit` skill — even though that comparison isn't this skill's job.
 
 ## User Segments
 [Include only if the data actually supports distinct segments]

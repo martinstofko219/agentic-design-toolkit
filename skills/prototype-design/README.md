@@ -61,3 +61,4 @@ The skill will push back gently on vague visual directions like "clean and minim
 
 - **`design-grill`** — run this first if the concept isn't clearly defined
 - **`wireframe-design`** — use this earlier in the process if you're still exploring structural directions
+- **`prototype-audit`** — once the prototype is built, use this to check it against any research findings and get a prioritized plan for closing the gaps
