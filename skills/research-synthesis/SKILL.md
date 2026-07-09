@@ -55,10 +55,13 @@ Give a reader enough here to orient before they hit the themes below — who was
 
 ### [Theme name]
 **Prevalence:** [X of Y participants, or "emerging" if too early to quantify]
+
 **What we heard:** [Plain description of the pattern]
+
 **Evidence:**
 - "[Direct quote]" — P[X]
 - "[Direct quote]" — P[X]
+
 **Why it matters:** [The implication for the product or the team, kept separate from the observation itself]
 
 [Repeat per theme]
