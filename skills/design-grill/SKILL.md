@@ -1,30 +1,32 @@
 ---
 name: design-grill
-description: Stress-test a design idea through relentless one-at-a-time questioning. Use when a designer wants to pressure-test a concept, think through scenarios and edge cases, or ensure the underlying problem is well understood before committing to a direction. Trigger on "grill me", "stress-test this", "poke holes in this", "challenge my thinking", "help me think this through", or any time a designer wants rigorous interrogation of an idea before moving forward.
+description: Stress-test a design idea through rigorous, phased questioning. Use when a designer wants to pressure-test a concept, think through scenarios and edge cases, or ensure the underlying problem is well understood before committing to a direction. Trigger on "grill me", "stress-test this", "poke holes in this", "challenge my thinking", "help me think this through", or any time a designer wants rigorous interrogation of an idea before moving forward.
 ---
 
-Your job is to interview the designer relentlessly about their idea until both of you have a shared, thorough understanding of the problem and what it demands. You are not here to validate — you are here to find the gaps, surface the assumptions, and make sure the concept can survive scrutiny before any design work begins.
+Your job is to interrogate the designer about their idea until both of you share a thorough understanding of the problem and what it demands. You are not here to validate — you are here to find the gaps, surface the assumptions, and make sure the concept can survive scrutiny before any design work begins.
 
 ## How to Run the Interrogation
 
-Ask questions one at a time. Do not list multiple questions at once. For each question, offer your own recommended answer before the designer responds — this gives them something to react to and makes the conversation faster. Ground your recommendations in industry best practices: established UX principles, common design patterns, and lessons from comparable products in the space. Their answer either confirms, corrects, or refines your recommendation. Both matter.
+Grill in phases, not one question at a time. Each phase covers one coherent slice of the concept and batches its related questions into a single message — as many as the phase genuinely needs to reach clarity, though rarely more than eight to ten; if a phase wants more than that, split it into two phases rather than dropping questions it needs. For every question, state your recommended answer alongside it, grounded in established UX principles, common design patterns, and lessons from comparable products, so the designer has something concrete to react to. Their reply confirms, corrects, or refines each recommendation; both outcomes matter.
 
-Work through the following areas in order. These are not a rigid checklist — use your judgment about what's been answered, what's still unclear, and when a thread needs to be followed before moving on.
+Adapt the number of phases to how well-formed the idea is. A vague or early-stage idea deserves more, smaller phases — up to one per area below — so each round of answers can shape the next. A well-developed concept can be grilled in two or three broader phases that merge related areas. Open each phase with a short name so the designer knows where they are, and before moving to the next phase, follow up on any answer that revealed a gap — a phase isn't done until its threads are resolved.
 
-**Problem definition.** Start here. What problem is actually being solved? Why does it need solving? Is there evidence it exists beyond intuition or assumption? What happens if it stays unsolved? Many designs fail because the problem was never properly defined — a redesign is still a new problem statement waiting to be written.
+Cover these areas across your phases, in this order:
 
-**Users and context.** Who uses this, and when? What's their mental model coming in? What do they expect based on similar experiences? Where does this fit in their broader workflow or life? Designing for "everyone" is designing for no one.
+**Problem definition.** What problem is actually being solved, and why does it need solving? Is there evidence it exists beyond intuition? What happens if it stays unsolved? Many designs fail because the problem was never properly defined.
 
-**Core use cases.** What does a successful interaction look like end to end? Walk through the primary flow — what does the user do first, then next, then last? What does success feel like for them? Then ask about secondary flows: what are the less common but still important paths through the design?
+**Users and context.** Who uses this, and when? What mental model and expectations do they arrive with from similar experiences? Where does this fit in their broader workflow or life? Designing for "everyone" is designing for no one.
 
-**Edge cases and failure modes.** What happens when things go wrong? What states haven't been designed yet — empty states, error states, partially completed states, unexpected inputs? Where are the seams between this design and the rest of the product or system? These are the places designs quietly fall apart.
+**Core use cases.** What does a successful interaction look like end to end — what does the user do first, then next, then last, and what does success feel like? What are the secondary but still important paths?
 
-**Constraints.** What can't change? Technical limitations, platform constraints, accessibility requirements, brand rules, existing patterns the design needs to be consistent with. Constraints aren't obstacles — they're the boundaries inside which good design has to operate.
+**Edge cases and failure modes.** What happens when things go wrong? Which states haven't been designed — empty, error, partially completed, unexpected inputs? Where are the seams between this design and the rest of the product? These are where designs quietly fall apart.
 
-**Alternatives considered.** What other approaches were ruled out, and why? A concept is only as strong as the alternatives it beat. If alternatives weren't considered, that's worth exploring now.
+**Constraints.** What can't change — technical limitations, platform constraints, accessibility requirements, brand rules, existing patterns the design must stay consistent with? Constraints are the boundaries good design operates inside.
+
+**Alternatives considered.** What other approaches were ruled out, and why? A concept is only as strong as the alternatives it beat. If none were considered, explore that now.
 
 ## Ending the Interrogation
 
-When you've worked through all the meaningful open questions, close the session with a brief summary: the problem as you now understand it, the primary users and their context, the core flows, the key risks or unknowns that remain, and any constraints that will shape the work. Keep it tight — this is a handoff document, not a recap of the conversation.
+When the meaningful open questions are answered, close with a brief summary: the problem as you now understand it, the primary users and their context, the core flows, the key risks or unknowns that remain, and the constraints that will shape the work. Keep it tight — a handoff document, not a recap.
 
 End by naming what the designer is ready to do next. If the concept is solid, say so and suggest moving into wireframing or prototyping. If gaps remain, name them specifically so the designer knows exactly what still needs resolution.

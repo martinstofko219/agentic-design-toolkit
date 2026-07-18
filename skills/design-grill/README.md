@@ -6,7 +6,7 @@ Pressure-test a design idea before any design work begins — so you're solving 
 
 ## Overview
 
-It's easy to jump into wireframes or prototypes with a concept that feels solid but hasn't been properly interrogated. This skill slows that down in a useful way. It interviews you about your idea — one question at a time — probing the problem definition, the users, the core flows, the edge cases, and the constraints you might not have thought through yet. The point isn't to block progress; it's to make sure the work that follows is built on something real.
+It's easy to jump into wireframes or prototypes with a concept that feels solid but hasn't been properly interrogated. This skill slows that down in a useful way. It interviews you about your idea in logical phases — batching related questions together — probing the problem definition, the users, the core flows, the edge cases, and the constraints you might not have thought through yet. The point isn't to block progress; it's to make sure the work that follows is built on something real.
 
 ---
 
@@ -41,7 +41,7 @@ That summary is the deliverable. It's not a design artifact — it's a foundatio
 
 ## Good to know
 
-The skill asks one question at a time and offers its own recommended answer before you respond — so you're reacting and refining rather than answering from scratch. Expect the conversation to take 10–20 minutes depending on how defined the concept is coming in.
+The skill grills in phases — each phase batches as many related questions as it needs, and every question comes with a recommended answer, so you're reacting and refining rather than answering from scratch. The number of phases adapts to how well-formed the concept is: vague ideas get more, smaller rounds; developed ones get fewer, broader rounds. Expect the conversation to take a handful of exchanges rather than a long back-and-forth.
 
 This skill is diagnostic, not generative. It won't produce screens, specs, or prototypes. What it produces is clarity — and a document that makes the next step significantly faster.
 
