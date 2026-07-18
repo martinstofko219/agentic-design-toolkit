@@ -24,11 +24,7 @@ Skip questions the designer has already answered.
 
 ## Generating Three Distinct Variations
 
-The three variations must represent genuinely different design bets — not the same layout reshuffled. Aim for difference at the level of information architecture, interaction model, or mental model. Label each with a name that captures its design bet — "Progressive Disclosure", "Single Canvas", "Guided Wizard" — not "Option 1."
-
-A useful internal test: if you described each variation in one sentence, would they sound like genuinely different approaches?
-
-Each variation must include 2–4 connected screens that show the core flow. Think about which screens together tell the full story of the interaction model being explored.
+The three variations must represent genuinely different design bets — not the same layout reshuffled. Aim for difference at the level of information architecture, interaction model, or mental model; a useful test is whether one-sentence descriptions of each would sound like genuinely different approaches. Label each with a name that captures its bet — "Progressive Disclosure", "Single Canvas", "Guided Wizard" — not "Option 1." Each variation includes 2–4 connected screens chosen to tell the full story of the interaction model being explored.
 
 ## Visual Style
 
@@ -54,4 +50,4 @@ The app shell must include:
 
 ## JavaScript Safety
 
-All string values in JS data objects (screen content, annotation text, labels) must use double quotes or template literals — never single quotes. Single-quoted strings break silently when the text contains an apostrophe (e.g. `"What's next"` is safe; `'What's next'` is a syntax error). This is the most common cause of blank screens. Verify mentally before writing any annotation or label string.
+All string values in JS data objects (screen content, annotation text, labels) must use double quotes or template literals — never single quotes, which break silently when the text contains an apostrophe (`"What's next"` is safe; `'What's next'` is a syntax error). This is the most common cause of blank screens.
