@@ -30,6 +30,8 @@ If the concept is still fuzzy or the problem isn't well defined, run `design-gri
 
 **In an agent session (Copilot or Claude):** Describe the concept and the agent will invoke the skill. It'll have a short discovery conversation with you to understand the domain, the flow, and any visual direction you have in mind — then propose an aesthetic before writing any code. You'll confirm the direction, and then it builds.
 
+Once invoked, the skill stays active for the rest of the session — iteration requests keep following the same guidelines without re-invoking it. Say "stop prototype-design" or "exit skill mode" to turn it off. Asking to iterate on an existing prototype in a fresh session re-triggers the skill.
+
 **Manually:** Add `SKILL.md` as context and describe your concept. Expect the same discovery conversation before anything gets generated.
 
 ---

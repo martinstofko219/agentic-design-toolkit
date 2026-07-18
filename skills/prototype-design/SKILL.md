@@ -1,33 +1,34 @@
 ---
 name: prototype-design
-description: Build a realistic, highly interactive React + Vite prototype for design exploration. Use when a designer wants to explore, communicate, or validate a UI concept with something that looks and feels like a real app — not a static mockup. Trigger on "prototype", "build a working version", "interactive mockup", "make this feel real", "concept app", "build this out", or any time the user wants to bring a design idea to life in code. Always use this skill when the request is about making a UI concept interactive and clickable, even if the word "prototype" never comes up.
+description: Build a realistic, highly interactive React + Vite prototype for design exploration. Use when a designer wants to explore, communicate, or validate a UI concept with something that looks and feels like a real app — not a static mockup. Trigger on "prototype", "build a working version", "interactive mockup", "make this feel real", "concept app", "build this out", or any time the user wants to bring a design idea to life in code. Always use this skill when the request is about making a UI concept interactive and clickable, even if the word "prototype" never comes up. Also trigger when a designer asks to iterate on, revise, or extend an existing prototype in the workspace, even in a fresh session.
 ---
 
 Your job is to turn a design idea into a realistic, interactive React + Vite prototype that feels like a real product. Not production-ready code — but convincing enough to explore, test, and communicate the concept. It should look and behave like a real app.
+
+**Session mode:** Once invoked, this skill stays active for the rest of the session — apply these guidelines to every subsequent request that builds on or iterates the prototype, without re-invocation. On first load, tell the designer the skill is active and remains so until they say "stop prototype-design" or "exit skill mode."
 
 ## Discovery First
 
 If the designer arrives with a vague idea or an underspecified problem, suggest running the `design-grill` skill before prototyping. A prototype built on an unclear concept is expensive to throw away — a grilling session is not.
 
-Before writing any code, have a natural conversation with the designer to understand what you're building and why. Don't run through a checklist — ask what you genuinely need to know, follow up where things are unclear, and stop when you have enough to make confident decisions. You're not trying to extract a spec; you're trying to understand the concept well enough that the prototype feels designed for this specific problem.
+Before writing any code, have a natural conversation with the designer — not a checklist — to understand:
 
-Understand: the problem the interface is solving, who uses it and in what context, the industry or domain it lives in, any workflow or flow the designer has in mind, any references or directions they're drawn to, and whether there's existing research (interviews, usability findings, a synthesis doc) this prototype is meant to answer to.
+- the problem the interface is solving
+- who uses it and in what context
+- the industry or domain it lives in
+- any workflow or flow the designer has in mind
+- references or directions they're drawn to
+- whether there's existing research (interviews, usability findings, a synthesis doc) this prototype is meant to answer to
 
-Once you have a clear picture, propose an aesthetic direction before building — but how you do this depends on what the designer brought you.
+Follow up where things are unclear and stop when you can make confident decisions — you're understanding the concept, not extracting a spec.
 
-If they haven't indicated a visual direction, propose two distinct aesthetic approaches. Make them genuinely different — not variations on the same theme. Each should have a name, a clear mood, a typographic character, a color story, and a sense of spatial feeling. Give the designer something real to react to, not a menu of safe options. They can pick one, blend elements, or use the contrast to articulate what they actually want.
-
-If they've already described a visual direction, don't just accept it at face value — ask questions to help them make it specific and their own. What references or textures are they drawn to? What feeling should the first screen create? Where do they want restraint versus expressiveness? The goal is to move from a generic label ("dark and modern," "clean and minimal") to something distinctive enough to execute with conviction.
+Once you have a clear picture, propose an aesthetic direction before building. If the designer hasn't indicated a visual direction, propose two genuinely distinct approaches — not variations on a theme — each with a name, a clear mood, a typographic character, a color story, and a sense of spatial feeling. Give them something real to react to; they can pick one, blend elements, or use the contrast to articulate what they want. If they've already described a direction, don't accept it at face value — ask what references or textures they're drawn to, what feeling the first screen should create, where they want restraint versus expressiveness, moving from a generic label ("dark and modern") to something distinctive enough to execute with conviction.
 
 Either way, confirm the direction before you start coding.
 
 ## Design Direction
 
-Commit to a single aesthetic and pursue it with intention. The prototype should feel designed specifically for its domain — a fintech tool has different energy than a consumer wellness app; a medical dashboard should feel different from a creative production tool. Name your direction before you build and execute it consistently across every screen.
-
-Typographic choices matter: pair a characterful display or heading font with a refined body font. Avoid the defaults that most generated UIs converge on — overused font stacks, predictable card grids, purple-gradient-on-white. Vary between light and dark. Choose colors that feel considered, not safe. Build visual atmosphere through background treatment — layered gradients, subtle texture, depth — rather than flat solid surfaces.
-
-The goal is for someone to look at this prototype and immediately feel where it lives. That feeling comes from committing to a direction, not hedging.
+Commit to a single aesthetic and pursue it with intention across every screen. The prototype should feel designed specifically for its domain — a fintech tool has different energy than a consumer wellness app or a medical dashboard. Pair a characterful display or heading font with a refined body font; avoid the defaults generated UIs converge on — overused font stacks, predictable card grids, purple-gradient-on-white. Vary between light and dark, choose colors that feel considered rather than safe, and build atmosphere through background treatment — layered gradients, subtle texture, depth — rather than flat solid surfaces. Someone should look at this prototype and immediately feel where it lives; that comes from committing, not hedging.
 
 ## Implementation
 
@@ -37,11 +38,11 @@ Structure it as a real multi-screen SPA with client-side routing or view state �
 
 **Design tokens**: Define all colors, spacing values, and typographic decisions as JS constants or CSS custom properties at the top of the project — not scattered inline throughout components. The palette, type scale, and spacing rhythm should be visible, named, and consistent. This makes the design coherent and easy to adjust.
 
-**Realistic data**: Every screen should be populated with plausible, domain-specific content. Real-looking names, real numbers, actual copy for headings, labels, and CTAs — not "User 1," "Item Name," or Lorem ipsum. The prototype should feel inhabited. Placeholder content breaks the illusion and makes it genuinely harder to evaluate the concept.
+**Realistic data**: Populate every screen with plausible, domain-specific content — real-looking names, real numbers, actual copy for headings, labels, and CTAs; never "User 1," "Item Name," or Lorem ipsum. Placeholder content breaks the illusion and makes the concept harder to evaluate.
 
-**Interactions and motion**: Include transitions between screens, meaningful hover states, and micro-interactions that reinforce the aesthetic direction. The prototype should feel alive — not over-engineered, but responsive and polished enough that clicking through it communicates the experience, not just the layout.
+**Interactions and motion**: Include transitions between screens, meaningful hover states, and micro-interactions that reinforce the aesthetic direction — not over-engineered, but responsive and polished enough that clicking through communicates the experience, not just the layout.
 
-**Scope**: Match complexity to the concept. Some prototypes are a focused single flow; others need several interconnected screens. Build what's needed to communicate the idea. A dashboard concept needs a real dashboard with data; an onboarding flow concept needs to actually walk through the steps. Don't pad scope, but don't cut corners that would make the concept feel hollow.
+**Scope**: Match complexity to the concept — a focused single flow or several interconnected screens, whatever communicates the idea. A dashboard concept needs a real dashboard with data; an onboarding concept needs to walk through the steps. Don't pad scope, but don't cut corners that make the concept feel hollow.
 
 ## What to Avoid
 
