@@ -1,17 +1,15 @@
 ---
 name: spec-design
-description: Build production-ready Angular UI pages and sections using the Nextech Design System (@nextech/ui-components). Use this skill whenever a designer or developer wants to translate a Figma design or React prototype into spec-quality Angular code, build a new page or section using the Nextech component library, or create handoff-ready Angular components with mock data. Always trigger when the user mentions building Angular UI with the Nextech library, converting a design to Angular, speccing out a page or feature in Angular, or creating components ready for developer handoff. Also trigger when the user provides a Figma link or points to a React prototype and wants it implemented in Angular.
+description: Build production-ready Angular UI pages and sections using the Nextech Design System (@nextech/ui-components). Trigger whenever a designer or developer wants to translate a Figma design or React prototype into spec-quality Angular code, build a page or section with the Nextech component library, spec out a page or feature in Angular, or create handoff-ready Angular components with mock data — including when the user provides a Figma link or points to a React prototype and wants it implemented in Angular.
 ---
 
 # spec-design
 
 This skill guides building production-ready Angular UI — pages, sections, and reusable components — using the Nextech Design System (`@nextech/ui-components`). The output is structured, accessible Angular code with mock data, ready for developers to wire up real API calls and logic.
 
-Design input may come from Figma frames (via the Figma MCP), React prototypes in the workspace, written descriptions, or a combination. The Nextech Design System MCP server is the single source of truth for available components, patterns, and tokens.
+Design input may come from Figma frames (via the Figma MCP), React prototypes in the workspace, written descriptions, or a combination. The Nextech Design System MCP server is the single source of truth for available components, patterns, and tokens. One invocation typically produces a complete page or a coherent, self-contained section; complex apps are built incrementally, section by section, across multiple invocations.
 
-One invocation typically produces a complete page or a coherent, self-contained section. Complex apps are built incrementally — section by section — across multiple invocations.
-
-**Session mode:** Once invoked, this skill stays active for the rest of the session. Apply these guidelines automatically to every subsequent build request without needing to be re-invoked. When the skill first loads, let the designer know it's active and will remain so until they say otherwise. To exit, the designer can say "stop spec-design" or "exit skill mode."
+**Session mode:** Once invoked, this skill stays active for the rest of the session — apply these guidelines to every subsequent build request without re-invocation. On first load, tell the designer the skill is active and remains so until they say "stop spec-design" or "exit skill mode."
 
 ---
 
@@ -19,11 +17,11 @@ One invocation typically produces a complete page or a coherent, self-contained 
 
 Before doing anything else, confirm the required tools and environment are available.
 
-**Nextech Design System MCP** — attempt to call `getComponentDescriptions()`. If it fails or is unavailable, stop and ask the user to install `@nextech/design-system-mcp` before continuing. This MCP is required for every build.
+**Nextech Design System MCP** — attempt to call `getComponentDescriptions()`. If it fails or is unavailable, stop and ask the user to install `@nextech/design-system-mcp`; it is required for every build.
 
-**Figma MCP** — only needed if the user provides a Figma link. If a Figma URL is present but the MCP is unavailable, ask the user for screenshots or a written description of the design instead.
+**Figma MCP** — needed only if the user provides a Figma link. If a Figma URL is present but the MCP is unavailable, ask for screenshots or a written description instead.
 
-**Angular workspace** — confirm the workspace has `@nextech/ui-components` installed. The user should already have an Angular app shell running; if not, ask them to set one up before proceeding.
+**Angular workspace** — confirm `@nextech/ui-components` is installed and an Angular app shell is running; if not, ask the user to set one up before proceeding.
 
 ---
 
@@ -31,27 +29,27 @@ Before doing anything else, confirm the required tools and environment are avail
 
 Gather and synthesize all available design references before writing any code.
 
-**If the concept itself is unclear** — the problem being solved, who the user is, what the layout or behavior should be — suggest running the `design-grill` skill before building. A spec-quality Angular implementation built on an unclear concept is expensive to rework. This applies regardless of what artifacts are provided: a vague description, a low-fidelity sketch without interaction notes, or a Figma frame that doesn't communicate intent all qualify. You need enough clarity to make confident decisions about component structure and behavior. If you can't make those decisions yet, grill first.
+**If the concept itself is unclear** — the problem being solved, who the user is, what the layout or behavior should be — suggest running the `design-grill` skill before building, regardless of what artifacts are provided: a vague description, a low-fidelity sketch without interaction notes, or a Figma frame that doesn't communicate intent all qualify. A spec-quality implementation built on an unclear concept is expensive to rework; if you can't yet make confident decisions about component structure and behavior, grill first.
 
 **If the concept is clear**, proceed with whatever design artifacts are available:
 
 **Figma link provided** — use the Figma MCP to pull design context: layout structure, component usage, spacing, typography, color, and any interaction or annotation notes. Component names in Figma often map directly to Nextech library components — note these matches.
 
-**React prototype in the workspace** — read the relevant component files to extract page and section layout, visual hierarchy, component breakdown, user flows and state transitions, and data shapes. The React prototype's visual style and theming will differ from the Nextech design system — this is intentional. Extract structure, workflow, and interaction logic. Do not carry over styling.
+**React prototype in the workspace** — read the relevant component files to extract page and section layout, visual hierarchy, component breakdown, user flows and state transitions, and data shapes. The prototype's visual style will intentionally differ from the Nextech design system — extract structure, workflow, and interaction logic; do not carry over styling.
 
 **Written description only** — the concept may be clear even without a design artifact. Ask only the targeted questions needed to understand layout, key interactions, and expected data before proceeding. Focus on what would block the build, not a complete spec.
 
 When multiple sources are available, treat them as complementary: Figma is authoritative on layout intent and visual hierarchy; the React prototype is authoritative on interaction flow and data structure; the Nextech MCP is authoritative on how to implement both.
 
-**Implementation plan from `prototype-audit`** — if the designer has a prioritized implementation plan produced by the `prototype-audit` skill, treat it as authoritative on what needs to change and why: it names specific gaps against research findings, in priority order. Build in that order unless the designer says otherwise, and use the plan's task descriptions alongside the design references above rather than re-deriving scope from scratch.
+**Implementation plan from `prototype-audit`** — if the designer has a prioritized plan from the `prototype-audit` skill, treat it as authoritative on what needs to change and why. Build in its priority order unless the designer says otherwise, and use its task descriptions alongside the design references above rather than re-deriving scope.
 
 ---
 
 ## Step 3: Discover Available Components and Patterns
 
-**On subsequent invocations**, scan the existing workspace before doing anything else. Read the component files already written to understand what's been built, what patterns have been established, and what shared components already exist. Reuse and stay consistent with what's there — don't duplicate a component that already exists. This replaces the need for a full MCP sweep; scope your discovery to the new elements in the current section only.
+**On subsequent invocations**, scan the existing workspace first: read the component files already written to learn what's been built, what patterns are established, and what shared components exist. Reuse and stay consistent with what's there — never duplicate an existing component. This replaces a full MCP sweep; scope discovery to the new elements in the current section only.
 
-Use the Nextech Design System MCP to inventory what's available for the specific UI being built. Do this before writing any code.
+Before writing any code, use the Nextech Design System MCP to inventory what's available for the specific UI being built:
 
 ```
 getComponentDescriptions()      → full list of available UI components
@@ -59,20 +57,15 @@ getPatternDescriptions()        → UX patterns (forms, navigation, data tables,
 getFoundationDescriptions()     → tokens for spacing, color, typography, elevation
 ```
 
-For the major elements identified in the design, find the closest Nextech component or pattern. Always prefer a library component over a custom implementation — even if configuration is needed. If something genuinely has no equivalent in the library, flag it explicitly and work with the designer to decide:
+For the major elements in the design, find the closest Nextech component or pattern. Always prefer a library component over a custom implementation, even if configuration is needed. If something genuinely has no library equivalent, flag it explicitly and work with the designer to decide whether an existing component can be configured to cover the need or a new custom component is required — agreeing on its behavior and visual approach before writing code.
 
-- Can an existing component be configured to cover the need?
-- Does a new custom component need to be built? If so, agree on its behavior and visual approach before writing code.
-
-Use the component-specific `*Docs()` tools to get full documentation for anything you plan to use — don't guess at props or configuration.
+Use the component-specific `*Docs()` tools for full documentation of anything you plan to use — don't guess at props or configuration.
 
 ---
 
 ## Step 4: Clarify Before Building
 
-Surface blockers and ambiguities before writing code. This keeps the build clean and avoids rework.
-
-Ask the designer about:
+Surface blockers and ambiguities before writing code. Ask the designer about:
 - UI elements with no clear Nextech equivalent
 - Interactions or behaviors that aren't clear from the design reference
 - Data structures that need to be understood to mock correctly
@@ -92,6 +85,7 @@ Implement the UI following all conventions below. Structure output as reusable, 
 - Extract any repeated patterns into shared child components
 - Use descriptive, hyphenated file names: `patient-summary-card.component.ts`, `appointment-list.component.ts`
 - Populate with realistic mock data — the UI should render meaningfully, not show empty shells
+- Do not generate unit tests (`*.spec.ts` files) — the output is a handoff spec with mock data, and tests belong to the implementing team once real logic and API calls are wired in
 
 ### Angular Conventions
 

@@ -52,7 +52,7 @@ Standalone Angular components written to the project conventions: `OnPush` chang
 
 Each invocation typically produces one complete page or a coherent self-contained section. Complex apps are built incrementally across multiple invocations.
 
-Components are populated with realistic mock data so the UI renders meaningfully and can be reviewed before any API integration work begins.
+Components are populated with realistic mock data so the UI renders meaningfully and can be reviewed before any API integration work begins. Unit tests are deliberately not included — the output is a handoff spec, and testing belongs to the implementing team once real logic is wired in.
 
 ---
 
