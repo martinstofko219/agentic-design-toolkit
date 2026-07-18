@@ -28,7 +28,7 @@ If either input doesn't exist yet, this isn't the right skill yet — run `resea
 
 ## How to invoke
 
-**In an agent session (Copilot or Claude):** Point at the synthesis doc and the prototype (a folder or file path) and describe what you want checked. The skill reads both in full before comparing anything, asks about the prototype's intent where the code alone doesn't explain it, and works through the plan with you before calling it done.
+**In an agent session (Copilot or Claude):** Point at the synthesis doc and the prototype (a folder or file path, or a Figma link) and describe what you want checked. The skill reads both in full before comparing anything, asks about the prototype's intent where the artifact alone doesn't explain it, and works through the plan with you before calling it done.
 
 ---
 
@@ -42,7 +42,7 @@ Priority and effort use the same High/Med/Low scale as `research-synthesis`'s In
 
 ## Good to know
 
-The skill reads the prototype's actual code — React/Vite, Angular, or a single-file HTML wireframe — rather than working from a description of it. If the prototype is a wireframe built in placeholder mode (bars instead of real copy), it'll say so and scope the audit to structure and flow rather than pretending to assess content it can't see.
+The skill reads the prototype's actual artifact — React/Vite or Angular code, a single-file HTML wireframe, or Figma frames pulled via the Figma MCP (design context plus screenshots) — rather than working from a description of it. If the prototype is a wireframe built in placeholder mode (bars instead of real copy), it'll say so and scope the audit to structure and flow rather than pretending to assess content it can't see; likewise, for static Figma frames it flags behavior-level verdicts as inferred rather than observed.
 
 It also won't manufacture a gap for every theme just to fill out the template — if the prototype genuinely gets something right, the audit says so.
 
@@ -54,3 +54,5 @@ It also won't manufacture a gap for every theme just to fill out the template �
 - **`prototype-design`** — produces the React/Vite prototypes this skill can audit, and is typically where the resulting plan gets executed
 - **`spec-design`** — where the plan often gets executed for Angular builds, and can also produce the prototype being audited
 - **`wireframe-design`** — can produce an earlier-stage HTML prototype this skill is also able to audit
+
+Figma frames need no producing skill — link the frames directly and the skill audits them via the Figma MCP.
