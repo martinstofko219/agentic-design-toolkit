@@ -18,7 +18,8 @@ The skills compose into a design workflow. Use this map to route a request to th
 4. `research-synthesis` — distill user research into themes, insights, and prioritized opportunities
 5. `prototype-audit` — compare a prototype against a research synthesis; produces a prioritized implementation plan
 6. `spec-design` — build production-ready Angular UI from a design, prototype, or audit plan
-7. `storybook-docs` — document design-system components and foundations in Storybook
+
+`storybook-docs` sits outside the pipeline — a standalone skill for documenting design-system components and foundations in Storybook.
 
 Skills are self-contained and can be invoked at any entry point — not every project touches every stage. Cross-references between skills use the skill's folder name.
 
