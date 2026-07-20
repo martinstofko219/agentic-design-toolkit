@@ -1,5 +1,8 @@
 ---
 applyTo: "**/*.ts,**/*.html,**/*.scss"
+# To scope these instructions to spec builds only (project folders ending in -spec), use:
+# applyTo: "**/*-spec/**/*.ts,**/*-spec/**/*.html,**/*-spec/**/*.scss"
+description: "Angular and TypeScript conventions for production UI work — signals-first state, standalone components, modern control flow, and WCAG 2.1 AA accessibility."
 ---
 
 You are an expert in TypeScript, Angular, and scalable web application development. You write functional, maintainable, performant, and accessible code following Angular and TypeScript best practices.
@@ -18,7 +21,8 @@ You are an expert in TypeScript, Angular, and scalable web application developme
 ## Angular: General Conventions
 
 - Prefer standalone components for all new features; use NgModules only when aligning with existing `ui-components` patterns (e.g., small NgModule wrappers for exports)
-- Set `changeDetection: ChangeDetectionStrategy.OnPush` on every component
+- Set `changeDetection: ChangeDetectionStrategy.OnPush` on every component (OnPush is the default from Angular 22; keep it explicit so behavior is unambiguous in workspaces on earlier versions)
+- Prefer zoneless change detection (`provideZonelessChangeDetection()`) for new applications — stable as of Angular 22, and signals-first components are already compatible with it
 - Implement lazy loading for feature routes
 - For new feature files, use descriptive file names without a `nextech-` prefix (e.g., `input-mask.directive.ts`). Existing `nextech-*` file names are valid and should only be renamed as part of an explicit migration
 - Use `NgOptimizedImage` for all static images (`NgOptimizedImage` does not work for inline base64 images)
@@ -33,7 +37,7 @@ You are an expert in TypeScript, Angular, and scalable web application developme
 - Use `class` binding instead of `ngClass` (exception: when binding a `Set`, `ngClass` is appropriate)
 - Do not use `ngStyle`; use `style` bindings instead
 - When using external templates and styles, use paths relative to the component TS file
-- Prefer reactive forms over template-driven forms
+- Prefer reactive forms over template-driven forms; on Angular 22+ workspaces, Signal Forms are stable and preferred for new form code
 
 ---
 
@@ -82,16 +86,17 @@ Signal queries resolve before `ngAfterViewInit`/`ngAfterContentInit` and can be 
 
 ## Async Data Fetching
 
-For async data that should participate in the signals reactive graph, use the `resource()` API:
+For async data that should participate in the signals reactive graph, use the resource APIs — stable as of Angular 22:
+
+- Use `httpResource()` for HTTP data fetching — it runs through `HttpClient`, so interceptors, testing utilities, and error handling all apply
+- Use `resource()` for non-HTTP async work tied to signal inputs (e.g., IndexedDB, file APIs, SDK calls)
+- Both expose `.value()`, `.status()`, and `.error()` as signals
 
 ```ts
-userResource = resource({
-  request: () => ({ id: this.userId() }),
-  loader: ({ request }) => fetch(`/api/users/${request.id}`).then(r => r.json())
-});
+user = httpResource(() => `/api/users/${this.userId()}`);
 ```
 
-`resource()` exposes `.value()`, `.status()`, and `.error()` as signals. Use it for straightforward data fetching tied to signal inputs. For complex HTTP scenarios requiring interceptors, error handling pipelines, or caching, continue using `HttpClient` with `toSignal()`.
+On workspaces running Angular versions before 22, treat these APIs as experimental and fall back to `HttpClient` with `toSignal()`.
 
 ---
 
