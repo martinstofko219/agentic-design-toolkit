@@ -20,6 +20,10 @@ agentic-design-toolkit/
 │   ├── prototype-design/
 │   │   ├── SKILL.md
 │   │   └── README.md
+│   ├── research-plan/
+│   │   ├── SKILL.md
+│   │   ├── README.md
+│   │   └── secondary-methods.md
 │   ├── research-synthesis/
 │   │   ├── SKILL.md
 │   │   └── README.md
@@ -44,7 +48,7 @@ agentic-design-toolkit/
 The skills compose into a design workflow, from raw concept to production-ready UI. Each skill is self-contained and can be invoked at any entry point — not every project touches every stage.
 
 ```
-design-grill → wireframe-design → prototype-design → research-synthesis → prototype-audit → spec-design
+design-grill → wireframe-design → prototype-design → research-plan → research-synthesis → prototype-audit → spec-design
 ```
 
 `storybook-docs` sits outside the pipeline — a standalone skill for documenting the design system itself.
@@ -54,6 +58,7 @@ design-grill → wireframe-design → prototype-design → research-synthesis �
 | [design-grill](skills/design-grill/SKILL.md) | Stress-test a design idea through phased, batched questioning with recommended answers before committing to a direction |
 | [wireframe-design](skills/wireframe-design/SKILL.md) | Generate low-fidelity wireframe explorations from a feature brief or design problem |
 | [prototype-design](skills/prototype-design/SKILL.md) | Build a realistic, interactive React + Vite prototype from a design concept |
+| [research-plan](skills/research-plan/SKILL.md) | Plan a research study — discovery interviews or a prototype-based usability test — co-drafting themes and test scenarios grounded in an analysis of the prototype (React, Angular, HTML, or Figma); surveys, card sorts, and A/B tests supported via a companion reference |
 | [research-synthesis](skills/research-synthesis/SKILL.md) | Turn interview transcripts and research notes into a synthesis doc of themes, insights, and recommendations |
 | [prototype-audit](skills/prototype-audit/SKILL.md) | Check a prototype — React/Vite, Angular, HTML wireframe, or Figma frames — against a research synthesis and produce a prioritized implementation plan to close the gaps |
 | [spec-design](skills/spec-design/SKILL.md) | Build production-ready Angular UI pages and sections using the Nextech Design System |

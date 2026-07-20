@@ -15,9 +15,10 @@ The skills compose into a design workflow. Use this map to route a request to th
 1. `design-grill` — pressure-test a concept before any design work begins
 2. `wireframe-design` — explore structural options as interactive lo-fi wireframes
 3. `prototype-design` — build a realistic, interactive React + Vite prototype of the chosen direction
-4. `research-synthesis` — distill user research into themes, insights, and prioritized opportunities
-5. `prototype-audit` — compare a prototype against a research synthesis; produces a prioritized implementation plan
-6. `spec-design` — build production-ready Angular UI from a design, prototype, or audit plan
+4. `research-plan` — plan a research study (discovery interviews or a prototype-based usability test); analyzes the prototype and co-drafts themes and test scenarios with the user
+5. `research-synthesis` — distill user research into themes, insights, and prioritized opportunities
+6. `prototype-audit` — compare a prototype against a research synthesis; produces a prioritized implementation plan
+7. `spec-design` — build production-ready Angular UI from a design, prototype, or audit plan
 
 `storybook-docs` sits outside the pipeline — a standalone skill for documenting design-system components and foundations in Storybook.
 
