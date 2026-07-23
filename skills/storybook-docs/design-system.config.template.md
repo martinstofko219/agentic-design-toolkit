@@ -30,5 +30,10 @@ or restyled, patterns you handle differently from the base system, and any brand
 or voice rules that should shape the documentation. Anything you write here
 overrides the base system's defaults for this repo.
 
+If your Storybook replaces the native show-code toggle with its own code-display
+mechanism (a wrapper component, an addon), document it here: what the mechanism
+is, how a story attaches code to it, and when a story should or shouldn't show
+code. Without this note the skill assumes Storybook's native source display.
+
 If `baseSystem` is `custom`, treat these notes as the primary source of truth and
 lean on general design-system best practice rather than Material conventions.
